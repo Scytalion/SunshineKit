@@ -1,0 +1,32 @@
+osx_image: xcode9.2
+language: objective-c
+podfile: "Example/Podfile"
+
+branches:
+  only:
+    - master
+
+env:
+  - DESTINATION='platform=OS X' POD_LINT="YES"
+  - DESTINATION='platform=iOS Simulator,name=iPhone 6S' BUILD_EXAMPLE="YES"
+  - DESTINATION='platform=watchOS Simulator,name=Apple Watch - 38mm' SKIP_TEST="YES"
+  - DESTINATION='platform=tvOS Simulator,name=Apple TV 4K'
+
+before_install:
+ - gem install xcpretty-travis-formatter
+
+script:
+  - set -o pipefail
+  - xcodebuild -scheme SunKit -destination "$DESTINATION" build | xcpretty -f `xcpretty-travis-formatter`
+  - if [ "$SKIP_TEST" != "YES" ]; then
+      xcodebuild -scheme SunKit -destination "$DESTINATION" test | xcpretty -f `xcpretty-travis-formatter`;
+    fi
+
+  - if [ "$POD_LINT" = "YES" ]; then
+     pod lib lint --allow-warnings;
+    fi
+
+  # Run release to master branch
+  - if [ "$POD_LINT" = "YES" ] && [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+      pod spec lint --allow-warnings;
+    fi
