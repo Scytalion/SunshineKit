@@ -13,7 +13,7 @@ before_install:
 
 script:
   - set -o pipefail
-  - xcodebuild -scheme SunKit -destination "$DESTINATION" test | xcpretty -f `xcpretty-travis-formatter`
+  - xcodebuild -scheme SunshineKit -destination "$DESTINATION" test | xcpretty -f `xcpretty-travis-formatter`
 
   - if [ "$POD_LINT" = "YES" ]; then
      pod lib lint;
