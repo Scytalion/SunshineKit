@@ -22,11 +22,13 @@ final class WikipediaSPATests: XCTestCase {
         dateComponents.year = 2006
         dateComponents.month = 8
         dateComponents.day = 6
-        dateComponents.hour = 8
+        dateComponents.hour = 6
         dateComponents.minute = 0
         dateComponents.second = 0
         
-        let date = Calendar.current.date(from: dateComponents)!
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        let date = calendar.date(from: dateComponents)!
         
         let coordinate = CLLocationCoordinate2D(latitude: 48.1, longitude: 11.6)
         

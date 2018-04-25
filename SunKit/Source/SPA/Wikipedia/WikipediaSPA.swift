@@ -20,18 +20,11 @@ import CoreLocation
  */
 func WikipediaSunPosition(for date: Date, coordinate: CLLocationCoordinate2D) -> SunPosition {
     let components = Set<Calendar.Component>([.year, .month, .day, .hour, .minute, .second])
-    var dateComponents = Calendar.current.dateComponents(components, from: date)
     
-    var secondsFromGMT = TimeZone.current.secondsFromGMT()
-    if TimeZone.current.isDaylightSavingTime() {
-        secondsFromGMT -= 3600
-    }
-    
-    var hour = dateComponents.hour! - secondsFromGMT/3600
-    if TimeZone.current.isDaylightSavingTime(for: date) {
-        hour -= 1
-    }
-    
+    var calendar = Calendar(identifier: .gregorian)
+    calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+    var dateComponents = calendar.dateComponents(components, from: date)
+    let hour = dateComponents.hour ?? 0
     let minute = dateComponents.minute
     let second = dateComponents.second
     
@@ -39,7 +32,7 @@ func WikipediaSunPosition(for date: Date, coordinate: CLLocationCoordinate2D) ->
     dateComponents.minute = 0
     dateComponents.second = 0
     
-    guard let zerothDate = Calendar.current.date(from: dateComponents) else { return SunPosition.empty }
+    guard let zerothDate = calendar.date(from: dateComponents) else { return SunPosition.empty }
     
     let jDay = julianDay(from: date)
     let n = jDay - 2451545
