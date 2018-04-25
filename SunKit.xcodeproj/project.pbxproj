@@ -59,7 +59,7 @@
 		7C178418207D70A30043780D /* NRELSunriseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRELSunriseTests.swift; sourceTree = "<group>"; };
 		7C178419207D70A30043780D /* NRELSPATests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRELSPATests.swift; sourceTree = "<group>"; };
 		7C17841A207D70A30043780D /* NRELJulianTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRELJulianTests.swift; sourceTree = "<group>"; };
-		7C659BE52090D7A20029EE2D /* SunKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SunKit.podspec; sourceTree = SOURCE_ROOT; };
+		7C659BE52090D7A20029EE2D /* SunshineKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SunshineKit.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +198,7 @@
 		7C659BE4208FDDB10029EE2D /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				7C659BE52090D7A20029EE2D /* SunKit.podspec */,
+				7C659BE52090D7A20029EE2D /* SunshineKit.podspec */,
 				7C1783E1207D70400043780D /* SunKit.h */,
 				7C1783E2207D70400043780D /* Info.plist */,
 			);
