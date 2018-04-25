@@ -1,6 +1,6 @@
 //
 //  Julian.swift
-//  SunBalcony
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 06.07.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.

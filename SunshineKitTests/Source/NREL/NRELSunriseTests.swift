@@ -1,6 +1,6 @@
 //
 //  NRELSunriseTests.swift
-//  SunBalcony
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 11.07.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.
@@ -48,7 +48,7 @@ final class NRELSunriseTests: XCTestCase {
         
         let transitHeightFragments: [SunRiseSetFragment] = [.transit([SunRiseSetFragment.DateHeightFragment.height])]
         sunriseset = NRELSunrise(for: date, timeZoneOffset: 0, coordinate: coordinate, fragments: transitHeightFragments)
-        XCTAssertEqual(sunriseset.transit!.height!, 32.0912504, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunriseset.transit!.height!, 32.0912504, accuracy: SunshineKitAccuracy)
         
         let transitBothFragments: [SunRiseSetFragment] = [.transit([SunRiseSetFragment.DateHeightFragment.date, SunRiseSetFragment.DateHeightFragment.height])]
         sunriseset = NRELSunrise(for: date, timeZoneOffset: 0, coordinate: coordinate, fragments: transitBothFragments)
@@ -56,7 +56,7 @@ final class NRELSunriseTests: XCTestCase {
         XCTAssertEqual(components.hour, 12)
         XCTAssertEqual(components.minute, 4)
         XCTAssertEqual(components.second, 0)
-        XCTAssertEqual(sunriseset.transit!.height!, 32.0912504, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunriseset.transit!.height!, 32.0912504, accuracy: SunshineKitAccuracy)
         
         
         let sunsetDateFragments: [SunRiseSetFragment] = [.sunset([SunRiseSetFragment.DateHeightFragment.date])]
@@ -68,11 +68,11 @@ final class NRELSunriseTests: XCTestCase {
         
         let sunsetHeightFragments: [SunRiseSetFragment] = [.sunset([SunRiseSetFragment.DateHeightFragment.height])]
         sunriseset = NRELSunrise(for: date, timeZoneOffset: 0, coordinate: coordinate, fragments: sunsetHeightFragments)
-        XCTAssertEqual(sunriseset.sunset!.height!, -0.73393324, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunriseset.sunset!.height!, -0.73393324, accuracy: SunshineKitAccuracy)
         
         let sunsetBothFragments: [SunRiseSetFragment] = [.sunset([SunRiseSetFragment.DateHeightFragment.date, SunRiseSetFragment.DateHeightFragment.height])]
         sunriseset = NRELSunrise(for: date, timeZoneOffset: 0, coordinate: coordinate, fragments: sunsetBothFragments)
-        XCTAssertEqual(sunriseset.sunset!.height!, -0.73393324, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunriseset.sunset!.height!, -0.73393324, accuracy: SunshineKitAccuracy)
         components = Calendar.current.dateComponents([.hour, .minute, .second], from: sunriseset.sunset!.date!)
         XCTAssertEqual(components.hour, 16)
         XCTAssertEqual(components.minute, 59)
@@ -88,11 +88,11 @@ final class NRELSunriseTests: XCTestCase {
         
         let sunriseHeightFragments: [SunRiseSetFragment] = [.sunrise([SunRiseSetFragment.DateHeightFragment.height])]
         sunriseset = NRELSunrise(for: date, timeZoneOffset: 0, coordinate: coordinate, fragments: sunriseHeightFragments)
-        XCTAssertEqual(sunriseset.sunrise!.height!, -0.843002484, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunriseset.sunrise!.height!, -0.843002484, accuracy: SunshineKitAccuracy)
         
         let sunriseBothFragments: [SunRiseSetFragment] = [.sunrise([SunRiseSetFragment.DateHeightFragment.date, SunRiseSetFragment.DateHeightFragment.height])]
         sunriseset = NRELSunrise(for: date, timeZoneOffset: 0, coordinate: coordinate, fragments: sunriseBothFragments)
-        XCTAssertEqual(sunriseset.sunrise!.height!, -0.843002484, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunriseset.sunrise!.height!, -0.843002484, accuracy: SunshineKitAccuracy)
         components = Calendar.current.dateComponents([.hour, .minute, .second], from: sunriseset.sunrise!.date!)
         XCTAssertEqual(components.hour, 7)
         XCTAssertEqual(components.minute, 8)

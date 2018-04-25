@@ -1,6 +1,6 @@
 //
-//  FractionOfDay+SunKitExtension.swift
-//  SunBalcony
+//  FractionOfDay+SunshineKitExtension.swift
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 11.07.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.

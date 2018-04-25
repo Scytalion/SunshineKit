@@ -1,6 +1,6 @@
 //
 //  NRELJulianTests.swift
-//  SunBalcony
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 06.07.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.
@@ -25,7 +25,7 @@ final class NRELJulianTests: XCTestCase {
         let century = julianCentury(for: jd)
         
         let millenium = julianEphemerisMillenium(for: century)
-        XCTAssertEqual(millenium, 0.010335386721423683, accuracy: SunKitAccuracy)
+        XCTAssertEqual(millenium, 0.010335386721423683, accuracy: SunshineKitAccuracy)
     }
     
     
@@ -49,7 +49,7 @@ final class NRELJulianTests: XCTestCase {
         let otherMillenias = julianEphemerisMillenias(for: centuries)
         XCTAssertEqual(otherMillenias.count, 100)
         for m in otherMillenias {
-            XCTAssertEqual(m, millenium, accuracy: SunKitAccuracy)
+            XCTAssertEqual(m, millenium, accuracy: SunshineKitAccuracy)
         }
     }
     
@@ -66,7 +66,7 @@ final class NRELJulianTests: XCTestCase {
         let jd = julianDay(for: date, timeZoneOffset: 0)
         
         let day = julianEphemerisDay(for: jd)
-        XCTAssertEqual(day, 2451545.0007754629, accuracy: SunKitAccuracy)
+        XCTAssertEqual(day, 2451545.0007754629, accuracy: SunshineKitAccuracy)
     }
     
     
@@ -87,7 +87,7 @@ final class NRELJulianTests: XCTestCase {
         XCTAssertEqual(otherDays.count, 100)
         
         for e in otherDays {
-            XCTAssertEqual(e, ephemerisDay, accuracy: SunKitAccuracy)
+            XCTAssertEqual(e, ephemerisDay, accuracy: SunshineKitAccuracy)
         }
     }
     
@@ -128,7 +128,7 @@ final class NRELJulianTests: XCTestCase {
         XCTAssertEqual(centuries.count, 100)
         
         for c in centuries {
-            XCTAssertEqual(c, century, accuracy: SunKitAccuracy)
+            XCTAssertEqual(c, century, accuracy: SunshineKitAccuracy)
         }
     }
     
@@ -144,7 +144,7 @@ final class NRELJulianTests: XCTestCase {
         
         let jd = julianDay(for: date, timeZoneOffset: 0)
         
-        XCTAssertEqual(jd, 2451545.0, accuracy: SunKitAccuracy)
+        XCTAssertEqual(jd, 2451545.0, accuracy: SunshineKitAccuracy)
         
         var dateComponents2 = DateComponents()
         dateComponents2.year = 1988
@@ -156,7 +156,7 @@ final class NRELJulianTests: XCTestCase {
         
         let julianDay2 = julianDay(for: date2, timeZoneOffset: 0)
         
-        XCTAssertEqual(julianDay2, 2447332.0, accuracy: SunKitAccuracy)
+        XCTAssertEqual(julianDay2, 2447332.0, accuracy: SunshineKitAccuracy)
         
         var dateComponents3 = DateComponents()
         dateComponents3.year = 2003
@@ -170,7 +170,7 @@ final class NRELJulianTests: XCTestCase {
         
         let julianDay3 = julianDay(for: date3, timeZoneOffset: -7)
         
-        XCTAssertEqual(julianDay3, 2452930.312847, accuracy: SunKitAccuracy)
+        XCTAssertEqual(julianDay3, 2452930.312847, accuracy: SunshineKitAccuracy)
     }
     
     

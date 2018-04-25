@@ -1,6 +1,6 @@
 //
 //  SPACalculator.swift
-//  SunBalcony
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 25.06.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.
@@ -13,13 +13,13 @@ import Accelerate
 
 
 /// Used for unit tests
-public let SunKitAccuracy = 0.000001
+public let SunshineKitAccuracy = 0.000001
 
-public let SunKitDefaultPressure = 1010.0
-public let SunKitDefaultTemperature = 10.0
-public let SunKitDefaultSlope = 30.0
-public let SunKitDefaultSurfaceAzimuth = -10.0
-public let SunKitDefaultBuildingHeight = 10.0
+public let SunshineKitDefaultPressure = 1010.0
+public let SunshineKitDefaultTemperature = 10.0
+public let SunshineKitDefaultSlope = 30.0
+public let SunshineKitDefaultSurfaceAzimuth = -10.0
+public let SunshineKitDefaultBuildingHeight = 10.0
 
 
 // MARK: - SPA
@@ -45,7 +45,7 @@ public let SunKitDefaultBuildingHeight = 10.0
  
  - returns: One SunPosition object per date with the given resolution and selected properties (Fragments)
  */
-public func NRELSunPositions(for date: Date, forHour hour: Int? = nil, withResolution resolution: JulianDayResolution, timeZoneOffset: Int, coordinate: CLLocationCoordinate2D, elevation: Double, fragments: [SunPositionFragment], pressure: Double = SunKitDefaultPressure, temperature: Double = SunKitDefaultTemperature, slope: Double = SunKitDefaultSlope, surfaceAzimuth: Double = SunKitDefaultSurfaceAzimuth, buildingHeight: Double = SunKitDefaultBuildingHeight) -> [SunPosition] {
+public func NRELSunPositions(for date: Date, forHour hour: Int? = nil, withResolution resolution: JulianDayResolution, timeZoneOffset: Int, coordinate: CLLocationCoordinate2D, elevation: Double, fragments: [SunPositionFragment], pressure: Double = SunshineKitDefaultPressure, temperature: Double = SunshineKitDefaultTemperature, slope: Double = SunshineKitDefaultSlope, surfaceAzimuth: Double = SunshineKitDefaultSurfaceAzimuth, buildingHeight: Double = SunshineKitDefaultBuildingHeight) -> [SunPosition] {
     let calculation_tupel = bool(for: fragments)
     
     var JD = julianDays(for: date, forHour: hour, timeZoneOffset: timeZoneOffset, withResolution: resolution) // 2452930.312847
@@ -883,7 +883,7 @@ public func NRELSunPositions(for date: Date, forHour hour: Int? = nil, withResol
  
  - returns: SunPosition object for the date with the selected properties (Fragments)
  */
-func NRELSunPosition(for date: Date, timeZoneOffset: Int, coordinate: CLLocationCoordinate2D, elevation: Double, fragments: [SunPositionFragment], pressure: Double = SunKitDefaultPressure, temperature: Double = SunKitDefaultTemperature, slope: Double = SunKitDefaultSlope, surfaceAzimuth: Double = SunKitDefaultSurfaceAzimuth, buildingHeight: Double = SunKitDefaultBuildingHeight) -> SunPosition {
+func NRELSunPosition(for date: Date, timeZoneOffset: Int, coordinate: CLLocationCoordinate2D, elevation: Double, fragments: [SunPositionFragment], pressure: Double = SunshineKitDefaultPressure, temperature: Double = SunshineKitDefaultTemperature, slope: Double = SunshineKitDefaultSlope, surfaceAzimuth: Double = SunshineKitDefaultSurfaceAzimuth, buildingHeight: Double = SunshineKitDefaultBuildingHeight) -> SunPosition {
     let calculation_tupel = bool(for: fragments)
     
     let JD = julianDay(for: date, timeZoneOffset: timeZoneOffset) // 2452930.3128472222

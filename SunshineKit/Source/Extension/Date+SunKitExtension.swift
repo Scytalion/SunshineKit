@@ -1,6 +1,6 @@
 //
-//  NSDate+SunKitExtension.swift
-//  SunBalcony
+//  NSDate+SunshineKitExtension.swift
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 04.07.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.

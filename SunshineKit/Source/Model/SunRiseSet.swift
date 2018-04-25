@@ -1,6 +1,6 @@
 //
 //  SunRiseSet.swift
-//  SunBalcony
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 07.07.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.

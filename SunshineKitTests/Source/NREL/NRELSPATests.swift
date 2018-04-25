@@ -1,6 +1,6 @@
 //
 //  SPATests.swift
-//  SunBalcony
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 25.06.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.
@@ -27,7 +27,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertEqual(clampedAngles1.count, 100)
         
         for angle in clampedAngles1 {
-            XCTAssertEqual(angle, clampedAngle1, accuracy: SunKitAccuracy)
+            XCTAssertEqual(angle, clampedAngle1, accuracy: SunshineKitAccuracy)
         }
         
         
@@ -40,7 +40,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertEqual(clampedAngles2.count, 100)
         
         for angle in clampedAngles2 {
-            XCTAssertEqual(angle, clampedAngle2, accuracy: SunKitAccuracy)
+            XCTAssertEqual(angle, clampedAngle2, accuracy: SunshineKitAccuracy)
         }
     }
     
@@ -49,11 +49,11 @@ final class NRELSPATests: XCTestCase {
         let angle1 = 480.0
         let value1 = clampAngleToThreeSixty(angle1)
         
-        XCTAssertEqual(value1, 120.0, accuracy: SunKitAccuracy)
+        XCTAssertEqual(value1, 120.0, accuracy: SunshineKitAccuracy)
         
         let angle2 = -380.0
         let value2 = clampAngleToThreeSixty(angle2)
-        XCTAssertEqual(value2, 340.0, accuracy: SunKitAccuracy)
+        XCTAssertEqual(value2, 340.0, accuracy: SunshineKitAccuracy)
     }
     
     
@@ -81,7 +81,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertEqual(results.count, 100)
         
         for result in results {
-            XCTAssertEqual(expectedResult, result, accuracy: SunKitAccuracy)
+            XCTAssertEqual(expectedResult, result, accuracy: SunshineKitAccuracy)
         }
     }
     
@@ -106,7 +106,7 @@ final class NRELSPATests: XCTestCase {
         let expectedResult = 310.28125065315311
         
         let result = calculateTerm(with: B_TERMS, index: 0, ephemerisMillenium: JME)
-        XCTAssertEqual(expectedResult, result, accuracy: SunKitAccuracy)
+        XCTAssertEqual(expectedResult, result, accuracy: SunshineKitAccuracy)
     }
     
     
@@ -128,16 +128,16 @@ final class NRELSPATests: XCTestCase {
         let pressure = 820.0
         let elevation = 1830.14
         let temperature = 11.0
-        let surfaceAzimuth = SunKitDefaultSurfaceAzimuth
+        let surfaceAzimuth = SunshineKitDefaultSurfaceAzimuth
         let sunPosition = NRELSunPosition(for: date, timeZoneOffset: -7, coordinate: coordinate, elevation: elevation, fragments: FullSunPositionFragments, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
         
-        XCTAssertEqual(sunPosition.ascension!, 202.22703929, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.zenith!, 50.111622024, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.incidence!, 25.187, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.shadow!.direction!, 14.3402405, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.shadow!.length!, 11.9647968, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.ascension!, 202.22703929, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.zenith!, 50.111622024, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.incidence!, 25.187, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.shadow!.direction!, 14.3402405, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.shadow!.length!, 11.9647968, accuracy: SunshineKitAccuracy)
     }
     
     
@@ -154,7 +154,7 @@ final class NRELSPATests: XCTestCase {
         let pressure = 820.0
         let elevation = 1830.14
         let temperature = 11.0
-        let surfaceAzimuth = SunKitDefaultSurfaceAzimuth
+        let surfaceAzimuth = SunshineKitDefaultSurfaceAzimuth
         
         
         let onlyAscensionFragment: [SunPositionFragment] = [.ascension]
@@ -165,7 +165,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(sunPosition.height)
         XCTAssertNil(sunPosition.zenith)
         XCTAssertNil(sunPosition.shadow)
-        XCTAssertEqual(sunPosition.ascension!, 202.22703929, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.ascension!, 202.22703929, accuracy: SunshineKitAccuracy)
         
         
         let onlyAzimuthFragment: [SunPositionFragment] = [.azimuth]
@@ -176,7 +176,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(sunPosition.height)
         XCTAssertNil(sunPosition.zenith)
         XCTAssertNil(sunPosition.shadow)
-        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunshineKitAccuracy)
         
         
         let onlyHeightFragment: [SunPositionFragment] = [.height]
@@ -187,7 +187,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNotNil(sunPosition.height)
         XCTAssertNil(sunPosition.zenith)
         XCTAssertNil(sunPosition.shadow)
-        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunshineKitAccuracy)
         
         
         let onlyIncidenceFragment: [SunPositionFragment] = [.incidence] // implies calculation of azmiuth, height and zenith
@@ -198,7 +198,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNotNil(sunPosition.height)
         XCTAssertNotNil(sunPosition.zenith)
         XCTAssertNil(sunPosition.shadow)
-        XCTAssertEqual(sunPosition.incidence!, 25.187, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.incidence!, 25.187, accuracy: SunshineKitAccuracy)
         
         
         let onlyZenithFragment: [SunPositionFragment] = [.zenith] // implies calculation of height
@@ -209,7 +209,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNotNil(sunPosition.height)
         XCTAssertNotNil(sunPosition.zenith)
         XCTAssertNil(sunPosition.shadow)
-        XCTAssertEqual(sunPosition.zenith!, 50.111622024, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.zenith!, 50.111622024, accuracy: SunshineKitAccuracy)
         
         
         let heightAndAzimuthFragment: [SunPositionFragment] = [.azimuth, .height] // implies calculation of height
@@ -220,8 +220,8 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNotNil(sunPosition.height)
         XCTAssertNil(sunPosition.zenith)
         XCTAssertNil(sunPosition.shadow)
-        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunshineKitAccuracy)
         
         
         let shadowFragment: [SunPositionFragment] = [.shadow([SunPositionFragment.Shadow.direction, SunPositionFragment.Shadow.length])]
@@ -232,10 +232,10 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNotNil(sunPosition.height)
         XCTAssertNil(sunPosition.zenith)
         XCTAssertNotNil(sunPosition.shadow)
-        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.shadow!.direction!, 14.3402405, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.shadow!.length!, 11.9647968, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.shadow!.direction!, 14.3402405, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.shadow!.length!, 11.9647968, accuracy: SunshineKitAccuracy)
         
         
         let shadowDirectionFragment: [SunPositionFragment] = [.shadow([SunPositionFragment.Shadow.direction])]
@@ -247,8 +247,8 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(sunPosition.zenith)
         XCTAssertNil(sunPosition.shadow!.length)
         XCTAssertNotNil(sunPosition.shadow!.direction)
-        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.shadow!.direction!, 14.3402405, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.azimuth!, 194.340241, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.shadow!.direction!, 14.3402405, accuracy: SunshineKitAccuracy)
         
         
         let shadowLengthFragment: [SunPositionFragment] = [.shadow([SunPositionFragment.Shadow.length])]
@@ -260,8 +260,8 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(sunPosition.zenith)
         XCTAssertNotNil(sunPosition.shadow!.length)
         XCTAssertNil(sunPosition.shadow!.direction)
-        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunKitAccuracy)
-        XCTAssertEqual(sunPosition.shadow!.length!, 11.9647968, accuracy: SunKitAccuracy)
+        XCTAssertEqual(sunPosition.height!, 39.888378, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(sunPosition.shadow!.length!, 11.9647968, accuracy: SunshineKitAccuracy)
         
         
         let now = Date()
@@ -276,7 +276,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(vdspSunPositions[0].height)
         XCTAssertNil(vdspSunPositions[0].zenith)
         XCTAssertNil(vdspSunPositions[0].shadow)
-        XCTAssertEqual(vdspSunPositions[0].ascension!, nowSunPosition.ascension!, accuracy: SunKitAccuracy)
+        XCTAssertEqual(vdspSunPositions[0].ascension!, nowSunPosition.ascension!, accuracy: SunshineKitAccuracy)
         
         
         vdspSunPositions = NRELSunPositions(for: hourNow, withResolution: .hour, timeZoneOffset: 0, coordinate: coordinate, elevation: 0, fragments: onlyAzimuthFragment, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
@@ -286,7 +286,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(vdspSunPositions[0].height)
         XCTAssertNil(vdspSunPositions[0].zenith)
         XCTAssertNil(vdspSunPositions[0].shadow)
-        XCTAssertEqual(vdspSunPositions[0].azimuth!, nowSunPosition.azimuth!, accuracy: SunKitAccuracy)
+        XCTAssertEqual(vdspSunPositions[0].azimuth!, nowSunPosition.azimuth!, accuracy: SunshineKitAccuracy)
         
         
         vdspSunPositions = NRELSunPositions(for: hourNow, withResolution: .hour, timeZoneOffset: 0, coordinate: coordinate, elevation: 0, fragments: onlyHeightFragment, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
@@ -297,7 +297,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(vdspSunPositions[0].zenith)
         XCTAssertNil(vdspSunPositions[0].shadow)
         // TODO: why is the accuracy lower?
-        XCTAssertEqual(vdspSunPositions[0].height!, nowSunPosition.height!, accuracy: SunKitAccuracy*100000)
+        XCTAssertEqual(vdspSunPositions[0].height!, nowSunPosition.height!, accuracy: SunshineKitAccuracy*100000)
         
         
         vdspSunPositions = NRELSunPositions(for: hourNow, withResolution: .hour, timeZoneOffset: 0, coordinate: coordinate, elevation: 0, fragments: onlyIncidenceFragment, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
@@ -308,7 +308,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNotNil(vdspSunPositions[0].zenith)
         XCTAssertNil(vdspSunPositions[0].shadow)
         // TODO: why is the accuracy lower?
-        XCTAssertEqual(vdspSunPositions[0].incidence!, nowSunPosition.incidence!, accuracy: SunKitAccuracy*100000)
+        XCTAssertEqual(vdspSunPositions[0].incidence!, nowSunPosition.incidence!, accuracy: SunshineKitAccuracy*100000)
         
         
         vdspSunPositions = NRELSunPositions(for: hourNow, withResolution: .hour, timeZoneOffset: 0, coordinate: coordinate, elevation: 0, fragments: onlyZenithFragment, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
@@ -319,7 +319,7 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNotNil(vdspSunPositions[0].zenith)
         XCTAssertNil(vdspSunPositions[0].shadow)
         // TODO: why is the accuracy lower?
-        XCTAssertEqual(vdspSunPositions[0].zenith!, nowSunPosition.zenith!, accuracy: SunKitAccuracy*1000000)
+        XCTAssertEqual(vdspSunPositions[0].zenith!, nowSunPosition.zenith!, accuracy: SunshineKitAccuracy*1000000)
         
         
         vdspSunPositions = NRELSunPositions(for: hourNow, withResolution: .hour, timeZoneOffset: 0, coordinate: coordinate, elevation: 0, fragments: heightAndAzimuthFragment, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
@@ -329,9 +329,9 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNotNil(vdspSunPositions[0].height)
         XCTAssertNil(vdspSunPositions[0].zenith)
         XCTAssertNil(vdspSunPositions[0].shadow)
-        XCTAssertEqual(vdspSunPositions[0].azimuth!, nowSunPosition.azimuth!, accuracy: SunKitAccuracy)
+        XCTAssertEqual(vdspSunPositions[0].azimuth!, nowSunPosition.azimuth!, accuracy: SunshineKitAccuracy)
         // TODO: why is the accuracy lower?
-        XCTAssertEqual(vdspSunPositions[0].height!, nowSunPosition.height!, accuracy: SunKitAccuracy*100000)
+        XCTAssertEqual(vdspSunPositions[0].height!, nowSunPosition.height!, accuracy: SunshineKitAccuracy*100000)
         
         
         vdspSunPositions = NRELSunPositions(for: hourNow, withResolution: .hour, timeZoneOffset: 0, coordinate: coordinate, elevation: 0, fragments: shadowFragment, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
@@ -342,11 +342,11 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(vdspSunPositions[0].zenith)
         XCTAssertNotNil(vdspSunPositions[0].shadow!.direction!)
         XCTAssertNotNil(vdspSunPositions[0].shadow!.length!)
-        XCTAssertEqual(vdspSunPositions[0].azimuth!, nowSunPosition.azimuth!, accuracy: SunKitAccuracy)
+        XCTAssertEqual(vdspSunPositions[0].azimuth!, nowSunPosition.azimuth!, accuracy: SunshineKitAccuracy)
         // TODO: why is the accuracy lower?
-        XCTAssertEqual(vdspSunPositions[0].height!, nowSunPosition.height!, accuracy: SunKitAccuracy*100000)
-        XCTAssertEqual(vdspSunPositions[0].shadow!.direction!, nowSunPosition.shadow!.direction!, accuracy: SunKitAccuracy)
-        XCTAssertEqual(vdspSunPositions[0].shadow!.length!, nowSunPosition.shadow!.length!, accuracy: SunKitAccuracy*100000)
+        XCTAssertEqual(vdspSunPositions[0].height!, nowSunPosition.height!, accuracy: SunshineKitAccuracy*100000)
+        XCTAssertEqual(vdspSunPositions[0].shadow!.direction!, nowSunPosition.shadow!.direction!, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(vdspSunPositions[0].shadow!.length!, nowSunPosition.shadow!.length!, accuracy: SunshineKitAccuracy*100000)
         
         
         vdspSunPositions = NRELSunPositions(for: hourNow, withResolution: .hour, timeZoneOffset: 0, coordinate: coordinate, elevation: 0, fragments: shadowDirectionFragment, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
@@ -357,8 +357,8 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(vdspSunPositions[0].zenith)
         XCTAssertNotNil(vdspSunPositions[0].shadow!.direction!)
         XCTAssertNil(vdspSunPositions[0].shadow!.length)
-        XCTAssertEqual(vdspSunPositions[0].azimuth!, nowSunPosition.azimuth!, accuracy: SunKitAccuracy)
-        XCTAssertEqual(vdspSunPositions[0].shadow!.direction!, nowSunPosition.shadow!.direction!, accuracy: SunKitAccuracy)
+        XCTAssertEqual(vdspSunPositions[0].azimuth!, nowSunPosition.azimuth!, accuracy: SunshineKitAccuracy)
+        XCTAssertEqual(vdspSunPositions[0].shadow!.direction!, nowSunPosition.shadow!.direction!, accuracy: SunshineKitAccuracy)
         
         
         vdspSunPositions = NRELSunPositions(for: hourNow, withResolution: .hour, timeZoneOffset: 0, coordinate: coordinate, elevation: 0, fragments: shadowLengthFragment, pressure: pressure, temperature: temperature, surfaceAzimuth: surfaceAzimuth)
@@ -370,8 +370,8 @@ final class NRELSPATests: XCTestCase {
         XCTAssertNil(vdspSunPositions[0].shadow!.direction)
         XCTAssertNotNil(vdspSunPositions[0].shadow!.length)
         // TODO: why is the accuracy lower?
-        XCTAssertEqual(vdspSunPositions[0].height!, nowSunPosition.height!, accuracy: SunKitAccuracy*100000)
-        XCTAssertEqual(vdspSunPositions[0].shadow!.length!, nowSunPosition.shadow!.length!, accuracy: SunKitAccuracy*100000)
+        XCTAssertEqual(vdspSunPositions[0].height!, nowSunPosition.height!, accuracy: SunshineKitAccuracy*100000)
+        XCTAssertEqual(vdspSunPositions[0].shadow!.length!, nowSunPosition.shadow!.length!, accuracy: SunshineKitAccuracy*100000)
     }
     
     
@@ -414,14 +414,14 @@ final class NRELSPATests: XCTestCase {
             let value1 = slowPositions[index]
             let value2 = fastPositions[index]
             
-            XCTAssertEqual(value1.ascension!, value2.ascension!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.azimuth!, value2.azimuth!, accuracy: SunKitAccuracy)
+            XCTAssertEqual(value1.ascension!, value2.ascension!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.azimuth!, value2.azimuth!, accuracy: SunshineKitAccuracy)
             // TODO: why is the accuracy lower?
-            XCTAssertEqual(value1.height!, value2.height!, accuracy: SunKitAccuracy*10, "index \(index) failed")
-            XCTAssertEqual(value1.incidence!, value2.incidence!, accuracy: SunKitAccuracy*10, "index \(index) failed")
-            XCTAssertEqual(value1.zenith!, value2.zenith!, accuracy: SunKitAccuracy*10, "index \(index) failed")
-            XCTAssertEqual(value1.shadow!.direction!, value2.shadow!.direction!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.shadow!.length!, value2.shadow!.length!, accuracy: SunKitAccuracy*10000, "index \(index) failed")
+            XCTAssertEqual(value1.height!, value2.height!, accuracy: SunshineKitAccuracy*10, "index \(index) failed")
+            XCTAssertEqual(value1.incidence!, value2.incidence!, accuracy: SunshineKitAccuracy*10, "index \(index) failed")
+            XCTAssertEqual(value1.zenith!, value2.zenith!, accuracy: SunshineKitAccuracy*10, "index \(index) failed")
+            XCTAssertEqual(value1.shadow!.direction!, value2.shadow!.direction!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.shadow!.length!, value2.shadow!.length!, accuracy: SunshineKitAccuracy*10000, "index \(index) failed")
         }
     }
     
@@ -461,13 +461,13 @@ final class NRELSPATests: XCTestCase {
             let value1 = slowPositions[index]
             let value2 = fastPositions[index]
             
-            XCTAssertEqual(value1.ascension!, value2.ascension!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.azimuth!, value2.azimuth!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.height!, value2.height!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.incidence!, value2.incidence!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.zenith!, value2.zenith!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.shadow!.direction!, value2.shadow!.direction!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.shadow!.length!, value2.shadow!.length!, accuracy: SunKitAccuracy)
+            XCTAssertEqual(value1.ascension!, value2.ascension!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.azimuth!, value2.azimuth!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.height!, value2.height!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.incidence!, value2.incidence!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.zenith!, value2.zenith!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.shadow!.direction!, value2.shadow!.direction!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.shadow!.length!, value2.shadow!.length!, accuracy: SunshineKitAccuracy)
         }
     }
     
@@ -503,13 +503,13 @@ final class NRELSPATests: XCTestCase {
             let value1 = slowPositions[index]
             let value2 = fastPositions[index]
             
-            XCTAssertEqual(value1.ascension!, value2.ascension!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.azimuth!, value2.azimuth!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.height!, value2.height!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.incidence!, value2.incidence!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.zenith!, value2.zenith!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.shadow!.direction!, value2.shadow!.direction!, accuracy: SunKitAccuracy)
-            XCTAssertEqual(value1.shadow!.length!, value2.shadow!.length!, accuracy: SunKitAccuracy)
+            XCTAssertEqual(value1.ascension!, value2.ascension!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.azimuth!, value2.azimuth!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.height!, value2.height!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.incidence!, value2.incidence!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.zenith!, value2.zenith!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.shadow!.direction!, value2.shadow!.direction!, accuracy: SunshineKitAccuracy)
+            XCTAssertEqual(value1.shadow!.length!, value2.shadow!.length!, accuracy: SunshineKitAccuracy)
         }
     }
     

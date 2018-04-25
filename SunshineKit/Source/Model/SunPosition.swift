@@ -1,6 +1,6 @@
 //
 //  SunPosition.swift
-//  SunBalcony
+//  SunshineKit
 //
 //  Created by Oleg Mueller on 14.05.16.
 //  Copyright © 2016 Oleg Mueller. All rights reserved.
