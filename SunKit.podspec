@@ -18,6 +18,5 @@ Pod::Spec.new do |s|
 
   s.ios.frameworks = 'Foundation', 'Accelerate', 'CoreLocation'
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
-  s.documentation_url = 'http://cocoadocs.org/docsets/SunKit/'
+  s.swift_version = '4.0'
 end
