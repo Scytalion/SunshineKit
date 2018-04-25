@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     :tag => s.version.to_s
   }
   s.ios.deployment_target = '10.0'
-  s.source_files = 'SunKit/Source/**/*.swift'
+  s.source_files = 'SunshineKit/Source/**/*.swift'
   s.ios.frameworks = 'Foundation', 'Accelerate', 'CoreLocation'
   s.swift_version = '4.0'
 end

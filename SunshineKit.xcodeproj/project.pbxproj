@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7C1783E8207D70400043780D /* SunshineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1783DE207D70400043780D /* SunshineKit.framework */; };
-		7C1783EF207D70400043780D /* SunKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1783E1207D70400043780D /* SunKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C178409207D70780043780D /* Date+SunKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1783FA207D70780043780D /* Date+SunKitExtension.swift */; };
 		7C17840A207D70780043780D /* FractionOfDay+SunKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1783FB207D70780043780D /* FractionOfDay+SunKitExtension.swift */; };
 		7C17840B207D70780043780D /* WikipediaSPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1783FE207D70780043780D /* WikipediaSPA.swift */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		7C1783DE207D70400043780D /* SunshineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunshineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C1783E1207D70400043780D /* SunKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunKit.h; sourceTree = "<group>"; };
 		7C1783E2207D70400043780D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C1783E7207D70400043780D /* SunshineKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunshineKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1783EE207D70400043780D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +58,7 @@
 		7C178419207D70A30043780D /* NRELSPATests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRELSPATests.swift; sourceTree = "<group>"; };
 		7C17841A207D70A30043780D /* NRELJulianTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRELJulianTests.swift; sourceTree = "<group>"; };
 		7C659BE52090D7A20029EE2D /* SunshineKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SunshineKit.podspec; sourceTree = SOURCE_ROOT; };
+		7CACE4B22090DFF9006EC8F7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +83,8 @@
 		7C1783D4207D703F0043780D = {
 			isa = PBXGroup;
 			children = (
+				7C659BE52090D7A20029EE2D /* SunshineKit.podspec */,
+				7CACE4B22090DFF9006EC8F7 /* README.md */,
 				7C1783E0207D70400043780D /* SunshineKit */,
 				7C1783EB207D70400043780D /* SunshineKitTests */,
 				7C1783DF207D70400043780D /* Products */,
@@ -198,8 +199,6 @@
 		7C659BE4208FDDB10029EE2D /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				7C659BE52090D7A20029EE2D /* SunshineKit.podspec */,
-				7C1783E1207D70400043780D /* SunKit.h */,
 				7C1783E2207D70400043780D /* Info.plist */,
 			);
 			path = Other;
@@ -212,7 +211,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C1783EF207D70400043780D /* SunKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
