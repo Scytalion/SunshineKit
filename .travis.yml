@@ -6,10 +6,7 @@ branches:
     - master
 
 env:
-  - DESTINATION='platform=OS X' POD_LINT="YES"
-  - DESTINATION='platform=iOS Simulator,name=iPhone 6S'
-  - DESTINATION='platform=watchOS Simulator,name=Apple Watch - 38mm' SKIP_TEST="YES"
-  - DESTINATION='platform=tvOS Simulator,name=Apple TV 4K'
+  - DESTINATION='platform=iOS Simulator,name=iPhone 6S' POD_LINT="YES"
 
 before_install:
  - gem install xcpretty-travis-formatter
