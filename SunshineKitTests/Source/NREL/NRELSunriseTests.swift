@@ -9,7 +9,7 @@
 import Foundation
 import XCTest
 import CoreLocation
-@testable import SunKit
+@testable import SunshineKit
 
 
 final class NRELSunriseTests: XCTestCase {

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SunKit
+@testable import SunshineKit
 import CoreLocation
 
 

@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-@testable import SunKit
+@testable import SunshineKit
 
 
 final class RadAndAngleTests: XCTestCase {

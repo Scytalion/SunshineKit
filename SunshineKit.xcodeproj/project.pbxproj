@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C1783E8207D70400043780D /* SunKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1783DE207D70400043780D /* SunKit.framework */; };
+		7C1783E8207D70400043780D /* SunshineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1783DE207D70400043780D /* SunshineKit.framework */; };
 		7C1783EF207D70400043780D /* SunKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1783E1207D70400043780D /* SunKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C178409207D70780043780D /* Date+SunKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1783FA207D70780043780D /* Date+SunKitExtension.swift */; };
 		7C17840A207D70780043780D /* FractionOfDay+SunKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1783FB207D70780043780D /* FractionOfDay+SunKitExtension.swift */; };
@@ -38,10 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7C1783DE207D70400043780D /* SunKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1783DE207D70400043780D /* SunshineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunshineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1783E1207D70400043780D /* SunKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunKit.h; sourceTree = "<group>"; };
 		7C1783E2207D70400043780D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C1783E7207D70400043780D /* SunKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1783E7207D70400043780D /* SunshineKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunshineKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1783EE207D70400043780D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C1783FA207D70780043780D /* Date+SunKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+SunKitExtension.swift"; sourceTree = "<group>"; };
 		7C1783FB207D70780043780D /* FractionOfDay+SunKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FractionOfDay+SunKitExtension.swift"; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C1783E8207D70400043780D /* SunKit.framework in Frameworks */,
+				7C1783E8207D70400043780D /* SunshineKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +84,8 @@
 		7C1783D4207D703F0043780D = {
 			isa = PBXGroup;
 			children = (
-				7C1783E0207D70400043780D /* SunKit */,
-				7C1783EB207D70400043780D /* SunKitTests */,
+				7C1783E0207D70400043780D /* SunshineKit */,
+				7C1783EB207D70400043780D /* SunshineKitTests */,
 				7C1783DF207D70400043780D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,28 +93,28 @@
 		7C1783DF207D70400043780D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7C1783DE207D70400043780D /* SunKit.framework */,
-				7C1783E7207D70400043780D /* SunKitTests.xctest */,
+				7C1783DE207D70400043780D /* SunshineKit.framework */,
+				7C1783E7207D70400043780D /* SunshineKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7C1783E0207D70400043780D /* SunKit */ = {
+		7C1783E0207D70400043780D /* SunshineKit */ = {
 			isa = PBXGroup;
 			children = (
 				7C659BE4208FDDB10029EE2D /* Other */,
 				7C1783F8207D70780043780D /* Source */,
 			);
-			path = SunKit;
+			path = SunshineKit;
 			sourceTree = "<group>";
 		};
-		7C1783EB207D70400043780D /* SunKitTests */ = {
+		7C1783EB207D70400043780D /* SunshineKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				7C1783EE207D70400043780D /* Info.plist */,
 				7C178414207D70A30043780D /* Source */,
 			);
-			path = SunKitTests;
+			path = SunshineKitTests;
 			sourceTree = "<group>";
 		};
 		7C1783F8207D70780043780D /* Source */ = {
@@ -219,9 +219,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7C1783DD207D70400043780D /* SunKit */ = {
+		7C1783DD207D70400043780D /* SunshineKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C1783F2207D70400043780D /* Build configuration list for PBXNativeTarget "SunKit" */;
+			buildConfigurationList = 7C1783F2207D70400043780D /* Build configuration list for PBXNativeTarget "SunshineKit" */;
 			buildPhases = (
 				7C1783D9207D70400043780D /* Sources */,
 				7C1783DA207D70400043780D /* Frameworks */,
@@ -232,14 +232,14 @@
 			);
 			dependencies = (
 			);
-			name = SunKit;
+			name = SunshineKit;
 			productName = SunKit;
-			productReference = 7C1783DE207D70400043780D /* SunKit.framework */;
+			productReference = 7C1783DE207D70400043780D /* SunshineKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7C1783E6207D70400043780D /* SunKitTests */ = {
+		7C1783E6207D70400043780D /* SunshineKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C1783F5207D70400043780D /* Build configuration list for PBXNativeTarget "SunKitTests" */;
+			buildConfigurationList = 7C1783F5207D70400043780D /* Build configuration list for PBXNativeTarget "SunshineKitTests" */;
 			buildPhases = (
 				7C1783E3207D70400043780D /* Sources */,
 				7C1783E4207D70400043780D /* Frameworks */,
@@ -250,9 +250,9 @@
 			dependencies = (
 				7C1783EA207D70400043780D /* PBXTargetDependency */,
 			);
-			name = SunKitTests;
+			name = SunshineKitTests;
 			productName = SunKitTests;
-			productReference = 7C1783E7207D70400043780D /* SunKitTests.xctest */;
+			productReference = 7C1783E7207D70400043780D /* SunshineKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7C1783D8207D703F0043780D /* Build configuration list for PBXProject "SunKit" */;
+			buildConfigurationList = 7C1783D8207D703F0043780D /* Build configuration list for PBXProject "SunshineKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -285,8 +285,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7C1783DD207D70400043780D /* SunKit */,
-				7C1783E6207D70400043780D /* SunKitTests */,
+				7C1783DD207D70400043780D /* SunshineKit */,
+				7C1783E6207D70400043780D /* SunshineKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -344,7 +344,7 @@
 /* Begin PBXTargetDependency section */
 		7C1783EA207D70400043780D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7C1783DD207D70400043780D /* SunKit */;
+			target = 7C1783DD207D70400043780D /* SunshineKit */;
 			targetProxy = 7C1783E9207D70400043780D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -479,14 +479,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SunKit/Other/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SunshineKit/Other/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olegmueller.SunKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olegmueller.SunshineKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -503,14 +503,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SunKit/Other/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SunshineKit/Other/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.olegmueller.SunKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olegmueller.SunshineKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -523,7 +523,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SunKitTests/Info.plist;
+				INFOPLIST_FILE = SunshineKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,7 +541,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SunKitTests/Info.plist;
+				INFOPLIST_FILE = SunshineKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,7 +557,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7C1783D8207D703F0043780D /* Build configuration list for PBXProject "SunKit" */ = {
+		7C1783D8207D703F0043780D /* Build configuration list for PBXProject "SunshineKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C1783F0207D70400043780D /* Debug */,
@@ -566,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C1783F2207D70400043780D /* Build configuration list for PBXNativeTarget "SunKit" */ = {
+		7C1783F2207D70400043780D /* Build configuration list for PBXNativeTarget "SunshineKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C1783F3207D70400043780D /* Debug */,
@@ -575,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C1783F5207D70400043780D /* Build configuration list for PBXNativeTarget "SunKitTests" */ = {
+		7C1783F5207D70400043780D /* Build configuration list for PBXNativeTarget "SunshineKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C1783F6207D70400043780D /* Debug */,

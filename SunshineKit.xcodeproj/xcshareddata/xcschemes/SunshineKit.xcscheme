@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C1783DD207D70400043780D"
-               BuildableName = "SunKit.framework"
-               BlueprintName = "SunKit"
-               ReferencedContainer = "container:SunKit.xcodeproj">
+               BuildableName = "SunshineKit.framework"
+               BlueprintName = "SunshineKit"
+               ReferencedContainer = "container:SunshineKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C1783E6207D70400043780D"
-               BuildableName = "SunKitTests.xctest"
-               BlueprintName = "SunKitTests"
-               ReferencedContainer = "container:SunKit.xcodeproj">
+               BuildableName = "SunshineKitTests.xctest"
+               BlueprintName = "SunshineKitTests"
+               ReferencedContainer = "container:SunshineKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C1783DD207D70400043780D"
-            BuildableName = "SunKit.framework"
-            BlueprintName = "SunKit"
-            ReferencedContainer = "container:SunKit.xcodeproj">
+            BuildableName = "SunshineKit.framework"
+            BlueprintName = "SunshineKit"
+            ReferencedContainer = "container:SunshineKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C1783DD207D70400043780D"
-            BuildableName = "SunKit.framework"
-            BlueprintName = "SunKit"
-            ReferencedContainer = "container:SunKit.xcodeproj">
+            BuildableName = "SunshineKit.framework"
+            BlueprintName = "SunshineKit"
+            ReferencedContainer = "container:SunshineKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C1783DD207D70400043780D"
-            BuildableName = "SunKit.framework"
-            BlueprintName = "SunKit"
-            ReferencedContainer = "container:SunKit.xcodeproj">
+            BuildableName = "SunshineKit.framework"
+            BlueprintName = "SunshineKit"
+            ReferencedContainer = "container:SunshineKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
