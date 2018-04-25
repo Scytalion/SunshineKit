@@ -1,6 +1,5 @@
-osx_image: xcode9.2
+osx_image: xcode9.3
 language: objective-c
-podfile: "Example/Podfile"
 
 branches:
   only:
@@ -8,7 +7,7 @@ branches:
 
 env:
   - DESTINATION='platform=OS X' POD_LINT="YES"
-  - DESTINATION='platform=iOS Simulator,name=iPhone 6S' BUILD_EXAMPLE="YES"
+  - DESTINATION='platform=iOS Simulator,name=iPhone 6S'
   - DESTINATION='platform=watchOS Simulator,name=Apple Watch - 38mm' SKIP_TEST="YES"
   - DESTINATION='platform=tvOS Simulator,name=Apple TV 4K'
 
@@ -17,16 +16,13 @@ before_install:
 
 script:
   - set -o pipefail
-  - xcodebuild -scheme SunKit -destination "$DESTINATION" build | xcpretty -f `xcpretty-travis-formatter`
-  - if [ "$SKIP_TEST" != "YES" ]; then
-      xcodebuild -scheme SunKit -destination "$DESTINATION" test | xcpretty -f `xcpretty-travis-formatter`;
-    fi
+  - xcodebuild -scheme SunKit -destination "$DESTINATION" test | xcpretty -f `xcpretty-travis-formatter`
 
   - if [ "$POD_LINT" = "YES" ]; then
-     pod lib lint --allow-warnings;
+     pod lib lint;
     fi
 
   # Run release to master branch
   - if [ "$POD_LINT" = "YES" ] && [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-      pod spec lint --allow-warnings;
+      pod spec lint;
     fi
