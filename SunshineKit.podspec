@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "SunshineKit"
   s.summary          = "Framework that calculates various Sun related data"
-  s.version          = "1.1.0"
+  s.version          = "1.1.1"
   s.homepage         = "https://github.com/scytalion/SunshineKit"
   s.license          = 'MIT'
   s.author           = { "Oleg Müller" => "oleg@bitgrainedbytes.com" }
