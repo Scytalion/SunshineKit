@@ -883,7 +883,7 @@ public func NRELSunPositions(for date: Date, forHour hour: Int? = nil, withResol
  
  - returns: SunPosition object for the date with the selected properties (Fragments)
  */
-func NRELSunPosition(for date: Date, timeZoneOffset: Int, coordinate: CLLocationCoordinate2D, elevation: Double, fragments: [SunPositionFragment], pressure: Double = SunshineKitDefaultPressure, temperature: Double = SunshineKitDefaultTemperature, slope: Double = SunshineKitDefaultSlope, surfaceAzimuth: Double = SunshineKitDefaultSurfaceAzimuth, buildingHeight: Double = SunshineKitDefaultBuildingHeight) -> SunPosition {
+public func NRELSunPosition(for date: Date, timeZoneOffset: Int, coordinate: CLLocationCoordinate2D, elevation: Double, fragments: [SunPositionFragment], pressure: Double = SunshineKitDefaultPressure, temperature: Double = SunshineKitDefaultTemperature, slope: Double = SunshineKitDefaultSlope, surfaceAzimuth: Double = SunshineKitDefaultSurfaceAzimuth, buildingHeight: Double = SunshineKitDefaultBuildingHeight) -> SunPosition {
     let calculation_tupel = bool(for: fragments)
     
     let JD = julianDay(for: date, timeZoneOffset: timeZoneOffset) // 2452930.3128472222
